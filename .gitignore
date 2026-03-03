@@ -3,6 +3,8 @@
 
 # Log file
 *.log
+logs/
+
 
 # BlueJ files
 *.ctxt
@@ -22,3 +24,23 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Docker volumes
+docker-data/
+postgres_data/
+mongo_data/
+
+# Environment files
+.env
+.env.*
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# OS Specific
+.DS_Store
+Thumbs.db
