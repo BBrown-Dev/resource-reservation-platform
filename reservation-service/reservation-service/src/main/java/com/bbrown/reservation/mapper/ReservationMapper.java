@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ReservationMapper {
 
+    // Converts a ReservationRequest DTO into a Reservation entity
     public Reservation toEntity(ReservationRequest request) {
         return Reservation.builder()
                 .resourceId(request.getResourceId())
@@ -17,6 +18,7 @@ public class ReservationMapper {
                 .build();
     }
 
+    // Converts a Reservation entity into a ReservationResponse DTO
     public ReservationResponse toResponse(Reservation reservation) {
         return ReservationResponse.builder()
                 .id(reservation.getId())

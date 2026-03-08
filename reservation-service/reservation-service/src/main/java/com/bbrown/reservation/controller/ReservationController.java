@@ -21,8 +21,14 @@ public class ReservationController {
 
     @PostMapping
     public ReservationResponse create(@RequestBody @Valid ReservationRequest request) {
+
+        // Convert the incoming DTO into a Reservation entity
         Reservation reservation = mapper.toEntity(request);
+
+        // Pass the entity into the service layer
         Reservation saved = service.create(reservation);
+
+        // Convert the saved entity back into a response DTO
         return mapper.toResponse(saved);
     }
 
